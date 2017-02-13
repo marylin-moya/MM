@@ -20,5 +20,6 @@ from blog.views import home
 
 urlpatterns = patterns('',
     ##url(r'^admin/', include(admin.site.urls)),
-    url(r'^$', home, name='home') 
+    url(r'^$', home, name='home')
+    #url(r'^$', FirstBlog.blog.home, name='home')
 )

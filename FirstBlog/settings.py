@@ -26,6 +26,7 @@ SECRET_KEY = 'v#9*k4$8y_-^h2ci)-aimwb*qm4thhik&&#^(er^otu_e)r^$6'
 DEBUG = True
 
 ALLOWED_HOSTS = ['192.168.33.100']
+#ALLOWED_HOSTS = ['']
 
 
 # Application definition
@@ -126,3 +127,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+
+#TEST_RUNNER = 'xmlrunner.extra.djangotestrunner.XMLTestRunner'
