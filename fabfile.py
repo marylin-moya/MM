@@ -26,7 +26,7 @@ def setup():
     local('python -m compileall .')
     local('cd ..')
     local('echo --Create a new directory with compiled files--')
-    local('rsync -av --exclude=*.py ../' + env.projectContainer + '/ ../MM_compiled')
+    local('rsync -av --exclude=*.py ../' + env.projectContainer + '/ MM_compiled')
 
 @task
 def test():
@@ -40,7 +40,6 @@ def test():
 def package():
     local('echo --Create Package--')
     local('ls')
-    #local('cd ..')
-    local('tar -czvf ../mm_blog.tar.gz ../MM_compiled')
+    local('tar -czvf mm_blog.tar.gz MM_compiled')
     local('ls ..')
     
