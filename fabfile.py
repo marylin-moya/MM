@@ -21,6 +21,7 @@ def localhost():
 # tasks
 @task
 def setup():
+    local('echo --DB queries--')
     local('echo --Starting Compile Task--')
     local('python -m compileall .')
     local('cd ..')
@@ -41,4 +42,5 @@ def package():
     local('ls')
     #local('cd ..')
     local('tar -czvf ../mm_blog.tar.gz ../MM_compiled')
+    local('ls ..')
     
