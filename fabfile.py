@@ -1,4 +1,4 @@
-#from __future__ import with_statement # needed for python 2.5
+from __future__ import with_statement # needed for python 2.5
 from fabric.api import *
 import os
 
@@ -30,6 +30,8 @@ def setup():
 @task
 def test():
     local('echo ---Starting Unit Test---')
+    local('pwd')
+    local('ls')
     local('python manage.py test blog.UnitTestCases.getPostFromDB')
 
 @task
