@@ -32,7 +32,8 @@ def test():
     local('echo ---Starting Unit Test---')
     local('pwd')
     local('ls')
-    local('python manage.py test blog.UnitTestCases.getPostFromDB')
+    #local('python manage.py test blog.UnitTestCases.getPostFromDB')
+    local('python manage.py test')
 
 @task
 def package():
