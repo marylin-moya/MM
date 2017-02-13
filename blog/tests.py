@@ -1,10 +1,10 @@
-#from django.test import TestCase
+from django.test import TestCase
 from blog.models import posts
 #import xmlrunner
-import unittest
+#import unittest
 # Create your tests here.
 
-class UnitTestCases(unittest.TestCase):
+class UnitTestCases(TestCase):
     def setUp(self):
         posts.objects.create(author="Bob",title="Hello World",bodytext="Lorem Ipsum",timestamp="2017-2-12 16:30")
    
