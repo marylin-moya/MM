@@ -21,12 +21,11 @@ def localhost():
 # tasks
 @task
 def setup():
-    local('echo --DB queries--')
     local('echo --Starting Compile Task--')
     local('python -m compileall .')
-    local('cd ..')
+    local('ls')
     local('echo --Create a new directory with compiled files--')
-    local('rsync -av --exclude=*.py ../' + env.projectContainer + '/ MM_compiled')
+    local('rsync -av --exclude=*.py ../' + env.projectContainer + ' MM_compiled')
 
 @task
 def test():
