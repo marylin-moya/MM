@@ -9,7 +9,7 @@ class UnitTestCases(TestCase):
         posts.objects.create(author="Bob",title="Hello World",bodytext="Lorem Ipsum",timestamp="2017-2-12 16:30")
    
     
-    def getPostFromDB(self):
+    def getPostObject(self):
         entries = posts.objects.filter(author="Bob")
         #entry = posts.objects.all()[:10]
         #entries = posts.objects.raw('SELECT author, title, bodytext FROM blog_posts')
