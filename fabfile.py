@@ -32,6 +32,7 @@ def test():
     local('echo ---Starting Unit Test---')
     local('pwd')
     local('ls')
+    local('echo updated')
     local('python manage.py test blog.UnitTestCases.getPostObject')
     #local('python manage.py test')
 
