@@ -1,5 +1,6 @@
 from __future__ import with_statement # needed for python 2.5
 from fabric.api import *
+from blog import *
 import os
 
 # globals
@@ -33,6 +34,7 @@ def test():
     local('pwd')
     local('ls')
     local('echo updated')
+    #local('python manage.py test blog.UnitTestCases.getPostObject')
     local('python manage.py test blog.UnitTestCases.getPostObject')
     #local('python manage.py test')
 
