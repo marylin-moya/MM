@@ -1,6 +1,6 @@
 from __future__ import with_statement # needed for python 2.5
 from fabric.api import *
-from blog.tests import *
+#from blog.tests import *
 import os
 
 # globals
