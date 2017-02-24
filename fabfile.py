@@ -44,4 +44,15 @@ def package():
     local('ls')
     local('tar -czvf mm_blog.tar.gz MM_compiled')
     local('ls ..')
+
+@task
+def deploy():
+    local('echo --Unzip Package--')
+    local('ls')
+    local('rm -r ../Blog'
+#    local('tar -czvf mm_blog.tar.gz MM_compiled')
+    local('tar xf mm_blog.tar.gz -C ../Blog/')
+    local('ls')
+    local('cd ../Blog/MM_compiled/'+env.projectContainer)
+    local('python manage.py runserver 192.168.33.20:8000')
     
